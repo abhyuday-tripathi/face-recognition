@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Emotion Identification Web App</title>
+  </head>
+  <body>
+    <center>
+      <header class="header bg-info">
+        <h2>Emotion Identification</h2>
+        <h4>😡 😔 😊 😖 😁 🧐</h4>
+      </header>
+      <div class="container-fluid">
+        <h2 class="text-muted">Take your selfie to generate emoji</h2>
+        <h3 class="text-warning">Are you happy ?</h3>
+        <h3 class="text-black">Are you sad ?</h3>
+        <h3 class="text-danger">Are you angry ?</h3>
+        <div
+          class="div1 d-flex"
+          style="align-items: center; justify-content: center"
+        >
+          <div>
+            <h4 class="badge bg-primary">Webcam View :--</h4>
+            <div
+              class="webcam-container mb-3"
+              style="border: 1px dashed black; width: 250px; height: 250px"
+            ></div>
+            <button class="btn btn-primary" id="btn1">Capture Image</button>
+          </div>
+          <div
+            class="div2"
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding-left: 150px;
+            "
+          >
+            <div class="badge bg-info mt-2 mx-3">
+              Prediction1 <span id="prediction1"></span>
+            </div>
+            <div class="badge bg-info mt-2 mx-3">
+              Prediction2 <span id="prediction2"></span>
+            </div>
+          </div>
+          <div style="margin-left: 200px">
+            <h4 class="badge bg-primary">SnapShot</h4>
+            <div
+              class="output mb-3"
+              style="border: 1px dashed black; width: 250px; height: 250px"
+            ></div>
+            <button onclick="check()" class="btn btn-primary">
+              Identify Emotion
+            </button>
+          </div>
+        </div>
+      </div>
+    </center>
+    <script src="https://unpkg.com/ml5@0.6.0/dist/ml5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webcamjs@1.0.26/webcam.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
